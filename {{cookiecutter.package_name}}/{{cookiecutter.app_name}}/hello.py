@@ -1,6 +1,7 @@
 """
 Hello world sample
 ==================
+
 """
 from {{ cookiecutter.app_name }}.exceptions import DummyError
 
@@ -12,7 +13,7 @@ class HelloBase:
     Keyword Arguments:
         name (str): Name to greet, default to ``world``.
     """
-    def __init__(self, name=None):
+    def __init__(self, *args, name=None, **kwargs):
         self.name = name or "world"
 
     def greet(self):

@@ -12,6 +12,7 @@ else:
     from {{ cookiecutter.app_name }}.logger import init_logger
 
     from {{ cookiecutter.app_name }}.cli.version import version_command
+    from {{ cookiecutter.app_name }}.cli.greet import greet_command
 
     # Help alias on '-h' argument
     CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
@@ -56,3 +57,4 @@ else:
 
     # Attach commands methods to the main grouper
     cli_frontend.add_command(version_command, name="version")
+    cli_frontend.add_command(greet_command, name="greet")

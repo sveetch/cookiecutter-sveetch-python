@@ -1,5 +1,5 @@
 """
-Some fixture methods
+Pytest fixtures
 """
 import os
 import pytest
