@@ -30,17 +30,17 @@ class FixturesSettingsTestMixin(object):
                 os.path.abspath(
                     os.path.dirname({{ cookiecutter.app_name }}.__file__)
                 ),
-                '..',
+                "..",
             )
         )
 
-        self.tests_dir = 'tests'
+        self.tests_dir = "tests"
         self.tests_path = os.path.join(
             self.package_path,
             self.tests_dir,
         )
 
-        self.fixtures_dir = 'data_fixtures'
+        self.fixtures_dir = "data_fixtures"
         self.fixtures_path = os.path.join(
             self.tests_path,
             self.fixtures_dir
@@ -67,12 +67,13 @@ class FixturesSettingsTestMixin(object):
         )
 
 
-@pytest.fixture(scope='session')
+@pytest.fixture(scope="session")
 def temp_builds_dir(tmpdir_factory):
     """
-    Prepare a temporary build directory
+    Shortand to prepare a temporary build directory where to create temporary
+    content from tests.
     """
-    fn = tmpdir_factory.mktemp('builds')
+    fn = tmpdir_factory.mktemp("builds")
     return fn
 
 

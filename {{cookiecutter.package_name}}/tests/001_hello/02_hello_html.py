@@ -38,4 +38,3 @@ def test_custom_name(name, container, expected):
     builder = HelloHTML(name=name, container=container)
 
     assert builder.greet() == expected
-

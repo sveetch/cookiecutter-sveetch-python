@@ -47,6 +47,7 @@ install: venv
 
 flake:
 	$(FLAKE) --show-source $(APPLICATION_NAME)
+	$(FLAKE) --show-source tests
 .PHONY: flake
 
 tests:

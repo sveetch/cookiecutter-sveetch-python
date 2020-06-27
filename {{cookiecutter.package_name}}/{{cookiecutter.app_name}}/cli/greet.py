@@ -29,7 +29,7 @@ from {{ cookiecutter.app_name }}.hello import HelloBase, HelloHTML
     ),
     default=None,
 )
-@click.argument('name', required=False)
+@click.argument("name", required=False)
 @click.pass_context
 def greet_command(context, output_format, container, name):
     """
@@ -41,7 +41,7 @@ def greet_command(context, output_format, container, name):
     logger.debug("Required container: {}".format(container))
 
     if output_format == "plain" and container:
-        logger.warning("Define a HTML container in plain format has no sense.")
+        logger.warning("Defining a HTML container in plain format has no sense.")
 
     if name == "ass":
         logger.critical("Please do not be so crude.")

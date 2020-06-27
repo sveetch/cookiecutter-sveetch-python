@@ -21,12 +21,22 @@ Just invoke the `Cookiecutter`_ template to create a new project: ::
 Package content
     A Python3 package with everything to start:
 
+    * Promote Test Driven Development;
     * Configuration in ``setup.cfg`` ready to upload package to Pypi;
     * Sample object to say hello world;
     * Sample commandline actions with Click;
     * Flake8 configuration for quality review;
     * Tests on sample object;
     * Tox configuration for tests;
+    * Code is fully documented with ReStructuredText with Napoleon
+      extension format.
+
+    Package cover some basic features:
+
+    * Object inheritance;
+    * Click basic features;
+    * Python logging usage;
+    * Testing core, command line and logging;
 
 Package requirements
     To use it from repository url you just need `Cookiecutter`_.
