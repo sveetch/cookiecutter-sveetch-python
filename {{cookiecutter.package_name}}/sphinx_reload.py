@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 """
-Basic script to launch a livereload server to watch and rebuild documentation
-on "docs/" file changes.
+A script to launch a livereload server to watch and rebuild documentation
+on some sources changes.
 
 You need to have installed package with extra requirements ``dev`` to use it.
 
@@ -22,6 +22,24 @@ server = Server()
 # Watch root documents (not recursive)
 server.watch(
     'docs/*.rst',
+    shell(
+        'make html',
+        cwd='docs'
+    )
+)
+
+# Watch application core documents
+server.watch(
+    'docs/core/*.rst',
+    shell(
+        'make html',
+        cwd='docs'
+    )
+)
+
+# Watch root modules for autodoc review from core docs
+server.watch(
+    'adding_doc/*.py',
     shell(
         'make html',
         cwd='docs'

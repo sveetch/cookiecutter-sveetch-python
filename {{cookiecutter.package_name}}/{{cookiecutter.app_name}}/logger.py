@@ -13,7 +13,7 @@ def init_logger(name, level, printout=True):
 
     Arguments:
         name (str): Logger name used to instanciate and retrieve it.
-        level (str): Level name (``debug``, ``info``, etc..).
+        level (str): Level name (``debug``, ``info``, etc..) to enable.
 
     Keyword Arguments:
         printout (bool): If False, logs will never be outputed.

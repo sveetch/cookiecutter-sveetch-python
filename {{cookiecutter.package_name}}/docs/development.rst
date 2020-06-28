@@ -1,5 +1,3 @@
-.. _intro_development:
-
 .. _virtualenv: https://virtualenv.pypa.io
 .. _pip: https://pip.pypa.io
 .. _Pytest: http://pytest.org
@@ -8,6 +6,8 @@
 .. _Sphinx: http://www.sphinx-doc.org
 .. _tox: http://tox.readthedocs.io
 .. _livereload: https://livereload.readthedocs.io
+
+.. _intro_development:
 
 ===========
 Development
@@ -26,6 +26,8 @@ Development requirements
 
 Every requirements are available in package extra requirements in section
 ``dev``.
+
+.. _install_development:
 
 Install for development
 ***********************

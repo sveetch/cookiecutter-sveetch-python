@@ -1,3 +1,6 @@
+.. _Python: https://www.python.org
+.. _Click: https://click.palletsprojects.com
+
 .. {{ cookiecutter.package_name }} documentation master file, created by {{ cookiecutter.author_name }}
 
 {{ '=' * cookiecutter.project_name|length }}
@@ -16,8 +19,8 @@ Links
 Dependancies
 ************
 
-* Python>=3.5;
-* Click>=7.0,<8.0
+* `Python`_>=3.5;
+* `Click`_>=7.0,<8.0
 
 User’s Guide
 ************
@@ -26,6 +29,8 @@ User’s Guide
    :maxdepth: 2
 
    install.rst
+   cli.rst
+   core/index.rst
 
 Developer’s Guide
 *****************

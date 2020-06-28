@@ -1,4 +1,16 @@
 .. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _Python: https://www.python.org
+.. _virtualenv: https://virtualenv.pypa.io
+.. _pip: https://pip.pypa.io
+.. _Pytest: http://pytest.org
+.. _Napoleon: https://sphinxcontrib-napoleon.readthedocs.org
+.. _Flake8: http://flake8.readthedocs.org
+.. _Sphinx: http://www.sphinx-doc.org
+.. _tox: http://tox.readthedocs.io
+.. _livereload: https://livereload.readthedocs.io
+.. _Click: https://click.palletsprojects.com
+.. _Read the Docs: https://readthedocs.org/
+.. _reStructuredText: https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html
 
 ===========================
 cookiecutter-sveetch-python
@@ -8,7 +20,7 @@ Yet another `Cookiecutter`_ template to produce a repository to start
 a Python3 package.
 
 It emphases on simple package with quality and not any relation to
-any service (state badge, pyup, travis, etc..) except ReadTheDoc
+any service (state badge, pyup, travis, etc..) except `Read the Docs`_
 link in README.
 
 Usage
@@ -21,15 +33,16 @@ Just invoke the `Cookiecutter`_ template to create a new project: ::
 Package content
     A Python3 package with everything to start:
 
-    * Promote Test Driven Development;
+    * Development in a Python virtual environment with `virtualenv`_ and `pip`_;
+    * Promote Test Driven Development with `Pytest`_;
     * Configuration in ``setup.cfg`` ready to upload package to Pypi;
     * Sample object to say hello world;
-    * Sample commandline actions with Click;
-    * Flake8 configuration for quality review;
+    * Sample commandline actions with `Click`_;
+    * `Flake8`_ configuration for quality review;
     * Tests on sample object;
-    * Tox configuration for tests;
-    * Code is fully documented with ReStructuredText with Napoleon
-      extension format.
+    * `tox`_ configuration for tests;
+    * Code is fully documented with `reStructuredText`_ and `Napoleon`_
+      extension for `Sphinx`_.
 
     Package cover some basic features:
 
