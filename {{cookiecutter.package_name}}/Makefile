@@ -3,6 +3,7 @@ VENV_PATH=.venv
 PIP=$(VENV_PATH)/bin/pip
 FLAKE=$(VENV_PATH)/bin/flake8
 PYTEST=$(VENV_PATH)/bin/pytest
+SPHINX_RELOAD=$(VENV_PATH)/bin/python sphinx_reload.py
 PACKAGE_NAME={{ cookiecutter.package_name }}
 APPLICATION_NAME={{ cookiecutter.app_name }}
 
@@ -15,9 +16,13 @@ help:
 	@echo "  clean-pycache       -- to remove all __pycache__, this is recursive from current directory"
 	@echo "  clean-install       -- to clean Python side installation"
 	@echo ""
+	@echo "  livedocs            -- to run livereload server to rebuild documentation on source changes"
+	@echo ""
 	@echo "  flake               -- to launch Flake8 checking"
 	@echo "  tests               -- to launch base test suite using Pytest"
 	@echo "  quality             -- to launch Flake8 checking and every tests suites"
+	@echo ""
+	@echo "  release             -- to release package for latest version on PyPi (once release has been pushed to repository)"
 	@echo
 
 clean-pycache:
@@ -45,6 +50,10 @@ install: venv
 	$(PIP) install -e .[dev]
 .PHONY: install
 
+livedocs:
+	$(SPHINX_RELOAD)
+.PHONY: livedocs
+
 flake:
 	$(FLAKE) --show-source $(APPLICATION_NAME)
 	$(FLAKE) --show-source tests
@@ -56,3 +65,9 @@ tests:
 
 quality: tests flake
 .PHONY: quality
+
+release:
+	rm -Rf dist
+	$(PYTHON_BIN) setup.py sdist
+	$(TWINE) upload dist/*
+.PHONY: release

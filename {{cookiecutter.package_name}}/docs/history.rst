@@ -1,3 +1,5 @@
+.. _intro_history:
+
 =======
 History
 =======
@@ -5,4 +7,4 @@ History
 Version 0.1.0 - Unreleased
 --------------------------
 
-* First release.
+* First commit.
