@@ -64,6 +64,9 @@ Package requirements
     ``click>=7.0,<8.0``, ``colorlog`` and ``colorama``. To install it from
     shipped Makefile you will also need ``virtualenv``.
 
+    Once created, you can install it locally with ``make install`` from project
+    directory.
+
 Naming
     For a given ``Sample bar`` project name:
 

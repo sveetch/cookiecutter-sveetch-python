@@ -7,7 +7,7 @@
 {{ cookiecutter.project_name }}
 {{ '=' * cookiecutter.project_name|length }}
 
-{{ cookiecutter.project_short_description }}
+{{ cookiecutter.project_short_description|wordwrap(80) }}
 
 Links
 *****
