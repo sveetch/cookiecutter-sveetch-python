@@ -11,6 +11,7 @@
 .. _Click: https://click.palletsprojects.com
 .. _Read the Docs: https://readthedocs.org/
 .. _reStructuredText: https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html
+.. _twine: https://twine.readthedocs.io
 
 ===========================
 cookiecutter-sveetch-python
@@ -22,6 +23,9 @@ a Python3 package.
 It emphases on simple package with quality and not any relation to
 any service (state badge, pyup, travis, etc..) except `Read the Docs`_
 link in README.
+
+A sample built from this template is available on repository
+`sveetch-python-sample <https://github.com/sveetch/sveetch-python-sample>`_.
 
 Usage
 *****
@@ -43,6 +47,7 @@ Package content
     * `tox`_ configuration for tests;
     * Code is fully documented with `reStructuredText`_ and `Napoleon`_
       extension for `Sphinx`_.
+    * Release with `twine`_.
 
     Package cover some basic features:
 
@@ -59,10 +64,6 @@ Package requirements
     template Makefile. Once installed you can create a bash alias like: ::
 
         alias cookpy='/home/your/install/cookiecutter-sveetch-python/.venv/bin/cookiecutter /home/your/install/cookiecutter-sveetch-python'
-
-    Once create the package itself have default requirements for
-    ``click>=7.0,<8.0``, ``colorlog`` and ``colorama``. To install it from
-    shipped Makefile you will also need ``virtualenv``.
 
     Once created, you can install it locally with ``make install`` from project
     directory.

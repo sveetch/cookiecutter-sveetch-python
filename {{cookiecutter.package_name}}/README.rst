@@ -1,4 +1,5 @@
 .. _Python: https://www.python.org/
+.. _Click: https://click.palletsprojects.com
 
 {{ '=' * cookiecutter.project_name|length }}
 {{ cookiecutter.project_name }}
@@ -6,10 +7,11 @@
 
 {{ cookiecutter.project_short_description|wordwrap(80) }}
 
-Requires
-********
+Dependancies
+************
 
-* `Python`_ >= 3.6;
+* `Python`_>=3.5;
+* `Click`_>=7.0,<8.0
 
 Links
 *****

@@ -6,6 +6,7 @@
 .. _Sphinx: http://www.sphinx-doc.org
 .. _tox: http://tox.readthedocs.io
 .. _livereload: https://livereload.readthedocs.io
+.. _twine: https://twine.readthedocs.io
 
 .. _intro_development:
 
@@ -79,6 +80,19 @@ directory: ::
     make livedocs
 
 And go on ``http://localhost:8002/`` or your server machine IP with port 8002.
+
+Releasing
+---------
+
+When you have a release to do, after you have correctly push all your commits
+you can use the shortcut: ::
+
+    make release
+
+Which will build the package release and send it to Pypi with `twine`_.
+You may think to
+`configure your Pypi account <https://twine.readthedocs.io/en/latest/#configuration>`_
+on your machine to avoid to input it each time.
 
 Contribution
 ------------

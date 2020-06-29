@@ -4,6 +4,7 @@ PIP=$(VENV_PATH)/bin/pip
 FLAKE=$(VENV_PATH)/bin/flake8
 PYTEST=$(VENV_PATH)/bin/pytest
 SPHINX_RELOAD=$(VENV_PATH)/bin/python sphinx_reload.py
+TWINE=$(VENV_PATH)/bin/twine
 PACKAGE_NAME={{ cookiecutter.package_name }}
 APPLICATION_NAME={{ cookiecutter.app_name }}
 
@@ -13,6 +14,7 @@ help:
 	@echo "  install             -- to install this project with virtualenv and Pip"
 	@echo ""
 	@echo "  clean               -- to clean EVERYTHING (Warning)"
+	@echo "  clean-doc       -- to remove documentation builds"
 	@echo "  clean-pycache       -- to remove all __pycache__, this is recursive from current directory"
 	@echo "  clean-install       -- to clean Python side installation"
 	@echo ""
@@ -36,7 +38,11 @@ clean-install:
 	rm -Rf $(PACKAGE_NAME).egg-info
 .PHONY: clean-install
 
-clean: clean-install clean-pycache
+clean-doc:
+	rm -Rf docs/_build
+.PHONY: clean-doc
+
+clean: clean-doc clean-install clean-pycache
 .PHONY: clean
 
 venv:
@@ -68,6 +74,6 @@ quality: tests flake
 
 release:
 	rm -Rf dist
-	$(PYTHON_BIN) setup.py sdist
+	$(VENV_PATH)/bin/python setup.py sdist
 	$(TWINE) upload dist/*
 .PHONY: release
