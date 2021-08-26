@@ -6,6 +6,7 @@ PYTEST=$(VENV_PATH)/bin/pytest
 SPHINX_RELOAD=$(VENV_PATH)/bin/python sphinx_reload.py
 TWINE=$(VENV_PATH)/bin/twine
 PACKAGE_NAME={{ cookiecutter.package_name }}
+PACKAGE_SLUG=`echo $(PACKAGE_NAME) | tr '-' '_'`
 APPLICATION_NAME={{ cookiecutter.app_name }}
 
 help:
@@ -35,7 +36,7 @@ clean-pycache:
 
 clean-install:
 	rm -Rf $(VENV_PATH)
-	rm -Rf $(PACKAGE_NAME).egg-info
+	rm -Rf $(PACKAGE_SLUG).egg-info
 .PHONY: clean-install
 
 clean-doc:
