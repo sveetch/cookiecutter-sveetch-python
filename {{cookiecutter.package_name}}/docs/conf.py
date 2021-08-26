@@ -10,8 +10,6 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-import os
-import sys
 
 # Get the module version
 from {{ cookiecutter.app_name }} import __version__ as {{ cookiecutter.app_name }}_version

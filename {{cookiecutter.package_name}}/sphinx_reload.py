@@ -37,7 +37,14 @@ server.watch(
     )
 )
 
-# Watch root modules for autodoc review from application documents
+# Watch Python modules for autodoc review
+server.watch(
+    "{{ cookiecutter.app_name }}/*.py",
+    shell(
+        "make html",
+        cwd="docs"
+    )
+)
 server.watch(
     "{{ cookiecutter.app_name }}/*/**.py",
     shell(
