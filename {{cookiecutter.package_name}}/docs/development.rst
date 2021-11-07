@@ -49,7 +49,7 @@ Unittests
 Unittests are made to works on `Pytest`_, a shortcut in Makefile is available
 to start them on your current development install: ::
 
-    make tests
+    make test
 
 
 Tox

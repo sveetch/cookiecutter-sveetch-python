@@ -9,48 +9,45 @@ help:
 	@echo "Please use \`make <target>' where <target> is one of"
 	@echo
 	@echo "  install             -- to install this project with virtualenv and Pip"
-	@echo ""
+	@echo
 	@echo "  clean               -- to clean EVERYTHING (Warning)"
 	@echo "  clean-pycache       -- to remove all __pycache__, this is recursive from current directory"
 	@echo "  clean-install       -- to clean Python side installation"
-	@echo ""
-	@echo "  flake               -- to launch Flake8 checking"
-	@echo "  tests               -- to launch base test suite using Pytest"
-	@echo "  quality             -- to launch Flake8 checking and every tests suites"
 	@echo
 
 clean-pycache:
+	@echo ""
+	@echo "==== Clear Python cache ===="
+	@echo ""
 	rm -Rf .pytest_cache
 	find . -type d -name "__pycache__"|xargs rm -Rf
 	find . -name "*\.pyc"|xargs rm -f
 .PHONY: clean-pycache
 
 clean-install:
+	@echo ""
+	@echo "==== Clear installation ===="
+	@echo ""
 	rm -Rf $(VENV_PATH)
 .PHONY: clean-install
 
 clean: clean-install clean-pycache
 .PHONY: clean
 
-install: venv
-	$(PIP) install -r requirements/base.txt
-	$(PIP) install -r requirements/dev.txt
-.PHONY: install
-
 venv:
+	@echo ""
+	@echo "==== Install virtual environment ===="
+	@echo ""
 	virtualenv -p $(PYTHON_INTERPRETER) $(VENV_PATH)
 	# This is required for those ones using old distribution
 	$(PIP) install --upgrade pip
 	$(PIP) install --upgrade setuptools
 .PHONY: venv
 
-flake:
-	$(FLAKE) --show-source $(PACKAGE_NAME)
-.PHONY: flake
-
-tests:
-	$(PYTEST) -vv tests/
-.PHONY: tests
-
-quality: tests flake
-.PHONY: quality
+install: venv
+	@echo ""
+	@echo "==== Install everything for development ===="
+	@echo ""
+	$(PIP) install -r requirements/base.txt
+	$(PIP) install -r requirements/dev.txt
+.PHONY: install
