@@ -10,8 +10,8 @@
 Dependancies
 ************
 
-* `Python`_>=3.5;
-* `Click`_>=7.0,<8.0
+* `Python`_>=3.6;
+* `Click`_>=8.0;
 
 Links
 *****
