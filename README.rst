@@ -58,6 +58,9 @@ Just invoke the `Cookiecutter`_ template to create a new project: ::
 
     cookiecutter https://github.com/sveetch/cookiecutter-sveetch-python.git
 
+.. note::
+    Current cookiecutter support is fixed to ``>=1.7.0,<=2.0.0`` until the new major 2.1.0 has been released.
+
 Package requirements
 --------------------
 
