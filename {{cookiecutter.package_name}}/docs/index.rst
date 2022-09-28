@@ -19,7 +19,7 @@ Links
 Dependancies
 ************
 
-* `Python`_>=3.6;
+* `Python`_>=3.8;
 * `Click`_>=8.0;
 
 User’s Guide
