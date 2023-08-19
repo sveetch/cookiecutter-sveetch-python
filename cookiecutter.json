@@ -10,5 +10,7 @@
     "project_short_description": "A Python package.",
 
     "pypi_username": "{{ cookiecutter.author_username }}",
-    "version": "0.1.0"
+    "version": "0.1.0",
+
+    "_cookiecutter_sveetch_python_version": "0.4.0-pre.3"
 }
