@@ -1,28 +1,23 @@
-.. _intro_cli:
+.. _cli_intro:
 
 ============
 Command line
 ============
 
 Usage
------
+*****
 
-You may reach the tool either directly: ::
+Once installed on your system you can use the tool directly: ::
 
-        .venv/bin/{{ cookiecutter.app_name }}
-
-Or more simplier after environment have been activated: ::
-
-    source .venv/bin/activate
     {{ cookiecutter.app_name }}
 
 Help
-----
+****
 
-There is the base tool help: ::
+There is a base tool help for global arguments: ::
 
     {{ cookiecutter.app_name }} -h
 
-And then each tool command has its own help: ::
+And if you use ``-h`` after command name, you will get its specific help: ::
 
     {{ cookiecutter.app_name }} greet -h

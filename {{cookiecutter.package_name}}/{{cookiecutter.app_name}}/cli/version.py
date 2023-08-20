@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import click
 
 from {{ cookiecutter.app_name }} import __version__

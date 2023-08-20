@@ -1,12 +1,8 @@
 """
-Hello world
-===========
-
 This is a basic hello world module to build greetings either in plain text or
 html fragment.
-
 """
-from {{ cookiecutter.app_name }}.exceptions import DummyError
+from {{ cookiecutter.app_name }}.exceptions import AppOperationError
 
 
 class HelloBase:
@@ -37,9 +33,9 @@ class HelloBase:
         application exceptions.
 
         Raises:
-            {{ cookiecutter.app_name }}.exceptions.DummyError: A basic exception.
+            AppOperationError: A sample exception.
         """
-        raise DummyError("I don't like to say goodbye.")
+        raise AppOperationError("I don't like to say goodbye.")
 
 
 class HelloHTML(HelloBase):

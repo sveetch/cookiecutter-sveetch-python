@@ -68,12 +68,11 @@ To use it from repository url you just need `Cookiecutter`_.
 
 However if you want to install it locally (to avoid doing request each time
 you use it) you will need virtualenv and use the ``make install`` from
-template Makefile. Once installed you can create a bash alias like: ::
+template Makefile.
+
+Once installed you can create a bash alias like: ::
 
     alias cookpy='/home/your/install/cookiecutter-sveetch-python/.venv/bin/cookiecutter /home/your/install/cookiecutter-sveetch-python'
-
-Once created, you can install it locally with ``make install`` from project
-directory.
 
 
 Options

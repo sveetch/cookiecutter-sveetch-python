@@ -1,7 +1,7 @@
 import pytest
 
 from {{ cookiecutter.app_name }}.hello import HelloBase
-from {{ cookiecutter.app_name }}.exceptions import DummyError
+from {{ cookiecutter.app_name }}.exceptions import AppOperationError
 
 
 def test_default_name():
@@ -42,7 +42,7 @@ def test_bye():
     """
     builder = HelloBase()
 
-    with pytest.raises(DummyError) as excinfo:
+    with pytest.raises(AppOperationError) as excinfo:
         builder.bye()
 
     assert "I don't like to say goodbye." == str(excinfo.value)

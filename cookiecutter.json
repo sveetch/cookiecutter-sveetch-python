@@ -4,13 +4,14 @@
     "author_username": "dummy",
 
     "project_name": "Project name",
-    "package_name": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
-    "app_name": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+    "package_name": "{{ cookiecutter.project_name.lower() | slugify }}",
+    "app_name": "{{ cookiecutter.package_name.replace('-', '_') }}",
+    "__class_name": "{{ cookiecutter.package_name.replace('-', ' ').title().replace(' ', '') }}",
 
     "project_short_description": "A Python package.",
 
     "pypi_username": "{{ cookiecutter.author_username }}",
     "version": "0.1.0",
 
-    "_cookiecutter_sveetch_python_version": "0.4.0-pre.4"
+    "_cookiecutter_sveetch_python_version": "0.4.0-pre.6"
 }

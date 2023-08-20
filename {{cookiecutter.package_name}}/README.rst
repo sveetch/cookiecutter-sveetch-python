@@ -7,7 +7,7 @@
 
 {{ cookiecutter.project_short_description|wordwrap(80) }}
 
-Dependancies
+Dependencies
 ************
 
 * `Python`_>=3.8;
