@@ -9,7 +9,7 @@ Version 0.4.0 - Unreleased
 * [cookie] Started this history changelog;
 * [cookie] Added ``_cookiecutter_sveetch_python_version`` variable to
   ``cookiecutter.json`` for versioning template;
-* [cookie] Upgraded to ``cookiecutter>=2.1.1``;
+* [cookie] Upgraded to ``cookiecutter>=2.3.0``;
 * [cookie] Added Makefile task ``project`` to create projects in ``dist/``;
 * [template] Fixed project test configuration;
 * [template] Removed support for Python 3.6 and 3.7;
