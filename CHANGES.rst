@@ -3,7 +3,7 @@
 History
 =======
 
-Version 0.4.0 - Unreleased
+Version 0.4.0 - 2023/08/21
 --------------------------
 
 This is a major upgrade to improve quality, documentation and package.
