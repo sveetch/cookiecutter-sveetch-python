@@ -3,6 +3,7 @@
     "project_short_description": "A Python package.",
 
     "include_cli": true,
+    "init_git_repository": true,
 
     "author_name": "Your name",
     "author_email": "Your email",
@@ -15,13 +16,14 @@
 
     "version": "0.1.0",
 
-    "_cookiecutter_sveetch_python_version": "0.4.0-pre.8",
+    "_cookiecutter_sveetch_python_version": "0.4.0-pre.9",
 
     "__prompts__": {
         "project_name": "Input your full project name:",
         "project_short_description": "Give a short description for this project:",
 
         "include_cli": "Do you need a commandline?",
+        "init_git_repository": "Do you want to init a GIT repository with an initial commit?",
 
         "author_name": "Author full name:",
         "author_email": "Author email:",

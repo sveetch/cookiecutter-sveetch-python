@@ -200,10 +200,10 @@ if __name__ == "__main__":
             [
                 "{{ cookiecutter.app_name }}/cli",
                 "tests/100_cli",
-                "machin",
                 "docs/cli.rst",
             ]
         )
 
     # Initialize GIT repository, usually the last task to use
-    manager.repository_init()
+    if context["init_git_repository"]:
+        manager.repository_init()

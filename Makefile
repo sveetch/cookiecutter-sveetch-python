@@ -13,16 +13,31 @@ FORMATBOLD:=$(shell tput bold)
 FORMATRESET:=$(shell tput sgr0)
 
 help:
-	@echo "Please use 'make <target>' where <target> is one of"
+	@echo "Please use 'make <target> [<target>...]' where <target> is one of"
+	@echo
+	@echo "  Cleaning"
+	@echo "  ========"
 	@echo
 	@echo "  clean               -- to clean EVERYTHING (Warning)"
 	@echo "  clean-pycache       -- to remove all __pycache__, this is recursive from current directory"
 	@echo "  clean-install       -- to clean Python side installation"
 	@echo "  clean-dist          -- to remove distributed directory"
 	@echo
+	@echo "  Installation"
+	@echo "  ============"
+	@echo
 	@echo "  install             -- to install this project with virtualenv and Pip"
 	@echo
-	@echo "  project             -- to create a new project"
+	@echo "  Usage"
+	@echo "  ====="
+	@echo
+	@echo "  project              -- to create a new project"
+	@echo
+	@echo "  Quality"
+	@echo "  ======="
+	@echo
+	@echo "  flake8               -- to check codestyle on cookie internals"
+	@echo "  template-flake8      -- to check codestyle on project template (it is expected to fail because of Jinja syntax in some files)"
 	@echo
 
 clean-pycache:
@@ -77,3 +92,17 @@ project:
 	@mkdir -p dist
 	@$(COOKIECUTTER_BIN) -o dist .
 .PHONY: project
+
+flake8:
+	@echo ""
+	@printf "$(FORMATBLUE)$(FORMATBOLD)---> Checking codestyle on cookie internals <---$(FORMATRESET)\n"
+	@echo ""
+	@$(FLAKE_BIN) --statistics --show-source hooks
+.PHONY: flake8
+
+template-flake8:
+	@echo ""
+	@printf "$(FORMATBLUE)$(FORMATBOLD)---> Checking codestyle on project template <---$(FORMATRESET)\n"
+	@echo ""
+	@$(FLAKE_BIN) --statistics --show-source \{\{\cookiecutter.project_name\}\}
+.PHONY: template-flake8

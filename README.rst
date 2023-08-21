@@ -10,6 +10,7 @@
 .. _livereload: https://livereload.readthedocs.io
 .. _Click: https://click.palletsprojects.com
 .. _Read the Docs: https://readthedocs.org/
+.. _Furo: https://github.com/pradyunsg/furo
 .. _reStructuredText: https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html
 .. _twine: https://twine.readthedocs.io
 
@@ -27,52 +28,93 @@ link in README.
 A sample built from this template is available on repository
 `sveetch-python-sample <https://github.com/sveetch/sveetch-python-sample>`_.
 
-Package content
-***************
 
-A Python3 package with everything to start:
+Features
+********
+
+Once created a project will have everything to start:
 
 * Development in a Python virtual environment with `virtualenv`_ and `pip`_;
 * Promote Test Driven Development with `Pytest`_;
 * Configuration in ``setup.cfg`` ready to upload package to Pypi;
 * Sample object to say hello world;
-* Sample commandline actions with `Click`_;
+* Optional CLI sample with `Click`_;
+* Optional GIT repository initialization;
 * `Flake8`_ configuration for quality review;
 * Tests on sample object;
 * `tox`_ configuration for tests;
 * Code is fully documented with `reStructuredText`_ and `Napoleon`_ extension for
-  `Sphinx`_.
+  `Sphinx`_ with modern theme `Furo`_.
 * Release with `twine`_.
 
 Package cover some basic features:
 
 * Object inheritance;
-* Click basic features;
+* Basic CLI features;
 * Python logging usage;
 * Testing core, command line and logging;
+
 
 Usage
 *****
 
-First install cookiecutter>=2.1.1.
+Without installation
+--------------------
 
-Then invoke the project template to create a new project: ::
+Basically to use this cookie to create a new project you just need to install
+`Cookiecutter`_ version 2.3.0 or latter: ::
+
+    pip install cookiecutter>=2.3.0
+
+You may then use it from its repository URL: ::
 
     cookiecutter https://github.com/sveetch/cookiecutter-sveetch-python.git
 
 
-Package requirements
---------------------
+With local installation
+------------------------
 
-To use it from repository url you just need `Cookiecutter`_.
+To speed up project creation you may install this cookie on your system.
 
-However if you want to install it locally (to avoid doing request each time
-you use it) you will need virtualenv and use the ``make install`` from
-template Makefile.
+First ensure you have `pip`_ and `virtualenv`_ packages installed and *GNU make*
+available on your system. Then type: ::
 
-Once installed you can create a bash alias like: ::
+    git clone https://github.com/sveetch/cookiecutter-sveetch-python.git
+    cd cookiecutter-sveetch-python
+    make install
 
-    alias cookpy='/home/your/install/cookiecutter-sveetch-python/.venv/bin/cookiecutter /home/your/install/cookiecutter-sveetch-python'
+.. Warning::
+
+    You will need to update your install yourself opposed to the direct
+    repository usage (*without install*) which always try to use the latest version
+    from master branch.
+
+    We recommend to reset it and reinstall it again: ::
+
+        git pull origin master
+        make clean install
+
+Makefile task
+.............
+
+You can use the included Makefile task: ::
+
+    make project
+
+It will create all new project in ``dist/`` directory.
+
+
+Bash alias
+..........
+
+Once installed you can also create shortcut with a bash alias in
+your ``.bash_aliases``: ::
+
+    alias cookpy='/home/foo/cookiecutter-sveetch-python/.venv/bin/cookiecutter /home/foo/cookiecutter-sveetch-python'
+
+So you will just have to execute following command to create a new project: ::
+
+    cookpy
 
 
 Options
@@ -85,9 +127,10 @@ Some of these have a default value filled from a previous value, obviously
 you can edit it to your own needs.
 
 You can pre define some options in your
-`cookiecutter user configuration <https://cookiecutter.readthedocs.io/en/1.7.2/advanced/user_config.html>`_
-to avoid to input it each time. This is especially recommended for the
-author and username ones.
+`cookiecutter user configuration <https://cookiecutter.readthedocs.io/en/latest/advanced/user_config.html>`_
+to avoid some inputs. This is especially recommended for options related to author that
+you should probably always use the same.
+
 
 Naming
 ******

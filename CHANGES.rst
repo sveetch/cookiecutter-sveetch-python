@@ -14,8 +14,12 @@ This is a major upgrade to improve quality, documentation and package.
   ``cookiecutter.json`` for versioning template;
 * [cookie] Upgraded to ``cookiecutter>=2.3.0``;
 * [cookie] Added Makefile task ``project`` to create projects in ``dist/``;
+* [cookie] Added a new option ``init_git_repository`` to enabled for automatic GIT
+  repository initialization on created project;
 * [cookie] Added a new option ``include_cli`` to choose to keep the CLI or not;
-* [cookie] Added a post hook to manage CLI files removing depending option;
+* [cookie] Added a post hook to manage CLI files removing and GIT initialization
+  depending options;
+* [cookie] Removed requirement to ``jinja2-time``;
 * [template] Fixed project test configuration;
 * [template] Removed support for Python 3.6 and 3.7;
 * [template] Updated ``.readthedocs.yml`` file to follow service deprecations changes;
