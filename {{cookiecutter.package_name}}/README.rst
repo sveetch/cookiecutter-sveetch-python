@@ -11,8 +11,8 @@ Dependencies
 ************
 
 * `Python`_>=3.8;
-* `Click`_>=8.0;
-
+{% if cookiecutter.include_cli -%}* `Click`_>=8.0;
+{% endif %}
 Links
 *****
 

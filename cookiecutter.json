@@ -1,31 +1,35 @@
 {
+    "project_name": "Project name",
+    "project_short_description": "A Python package.",
+
+    "include_cli": true,
+
     "author_name": "Your name",
     "author_email": "Your email",
     "author_username": "dummy",
     "pypi_username": "{{ cookiecutter.author_username }}",
 
-    "project_name": "Project name",
     "package_name": "{{ cookiecutter.project_name.lower() | slugify }}",
     "app_name": "{{ cookiecutter.package_name.replace('-', '_') }}",
     "__class_name": "{{ cookiecutter.package_name.replace('-', ' ').title().replace(' ', '') }}",
 
-    "project_short_description": "A Python package.",
-
     "version": "0.1.0",
 
-    "_cookiecutter_sveetch_python_version": "0.4.0-pre.7",
+    "_cookiecutter_sveetch_python_version": "0.4.0-pre.8",
 
     "__prompts__": {
+        "project_name": "Input your full project name:",
+        "project_short_description": "Give a short description for this project:",
+
+        "include_cli": "Do you need a commandline?",
+
         "author_name": "Author full name:",
         "author_email": "Author email:",
         "author_username": "Author username on Github:",
         "pypi_username": "Author username on PyPi:",
 
-        "project_name": "Input your full project name:",
         "package_name": "Customize your package name if needed:",
         "app_name": "Customize your application module name if needed:",
-
-        "project_short_description": "Give a short description for this project:",
 
         "version": "Package will starts in version:"
     }

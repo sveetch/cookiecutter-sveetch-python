@@ -10,8 +10,8 @@ Contents
    :maxdepth: 2
 
    install.rst
-   cli.rst
-   references/index.rst
+   {% if cookiecutter.include_cli -%}cli.rst
+   {% endif %}references/index.rst
 
 About the project
 *****************

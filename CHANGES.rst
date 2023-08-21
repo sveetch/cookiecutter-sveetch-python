@@ -6,11 +6,16 @@ History
 Version 0.4.0 - Unreleased
 --------------------------
 
+This is a major upgrade to improve quality, documentation and package.
+
+
 * [cookie] Started this history changelog;
 * [cookie] Added ``_cookiecutter_sveetch_python_version`` variable to
   ``cookiecutter.json`` for versioning template;
 * [cookie] Upgraded to ``cookiecutter>=2.3.0``;
 * [cookie] Added Makefile task ``project`` to create projects in ``dist/``;
+* [cookie] Added a new option ``include_cli`` to choose to keep the CLI or not;
+* [cookie] Added a post hook to manage CLI files removing depending option;
 * [template] Fixed project test configuration;
 * [template] Removed support for Python 3.6 and 3.7;
 * [template] Updated ``.readthedocs.yml`` file to follow service deprecations changes;
