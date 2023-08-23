@@ -3,6 +3,13 @@
 History
 =======
 
+Version 0.4.1 - 2023/08/23
+--------------------------
+
+* Fixed documentation requirements that did not used extra requirement ``[doc]`` that
+  resulted on build failure on readthedocs;
+
+
 Version 0.4.0 - 2023/08/21
 --------------------------
 
