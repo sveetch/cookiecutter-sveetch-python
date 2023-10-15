@@ -3,6 +3,14 @@
 History
 =======
 
+Version 0.4.2 - 2023/10/15
+--------------------------
+
+* Changed RTD configuration, now it does not install from package anymore but directly
+  from the package checkout so we are able to build RTD documentation from any
+  temporary working branch;
+
+
 Version 0.4.1 - 2023/08/23
 --------------------------
 

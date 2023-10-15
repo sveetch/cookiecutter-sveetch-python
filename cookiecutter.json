@@ -16,7 +16,7 @@
 
     "version": "0.1.0",
 
-    "_cookiecutter_sveetch_python_version": "0.4.1",
+    "_cookiecutter_sveetch_python_version": "0.4.2-pre.1",
 
     "__prompts__": {
         "project_name": "Input your full project name:",
