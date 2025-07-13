@@ -19,11 +19,11 @@ cookiecutter-sveetch-python
 ===========================
 
 Yet another `Cookiecutter`_ template to produce a repository to start
-a Python3 package.
+a Python package.
 
-It emphases on simple package with quality and not any relation to
-any service (state badge, pyup, travis, etc..) except `Read the Docs`_
-link in README.
+It emphases on a simple application with quality and not any relation to
+any service (state badge, pyup, travis, etc..) except
+`Read the Docs service <https://readthedocs.org/>`_ for documentation publishing.
 
 A sample built from this template is available on repository
 `sveetch-python-sample <https://github.com/sveetch/sveetch-python-sample>`_.
@@ -62,9 +62,9 @@ Without installation
 --------------------
 
 Basically to use this cookie to create a new project you just need to install
-`Cookiecutter`_ version 2.3.0 or latter: ::
+`Cookiecutter`_ version 2.4.0 or latter: ::
 
-    pip install cookiecutter>=2.3.0
+    pip install cookiecutter>=2.4.0
 
 You may then use it from its repository URL: ::
 

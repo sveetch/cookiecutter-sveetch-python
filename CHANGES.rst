@@ -3,6 +3,24 @@
 History
 =======
 
+
+Version 0.5.0 - 2025/07/13
+--------------------------
+
+This is a major release for a minor upgrade.
+
+* [cookie] Upgraded to ``cookiecutter>=2.4.0``;
+* [template] Removed support for Python<3.10;
+* [template] Added support for Python 3.11;
+* [template] Updated included script ``freezer.py`` to use ``importlib.metadata``
+  instead of deprecated ``pkg_resources``;
+* [template] Enabled Sphinx extension ``sphinx.ext.todo`` in documentation
+  configuration;
+* [template] Pinned various requirement to a minimal version to speed up Pip install;
+* [template] Added dummy ``pyproject.toml`` to fix install with recent Pip and
+  Setuptools. This is until template is fully moved to 'pyproject.toml';
+
+
 Version 0.4.2 - 2023/10/15
 --------------------------
 

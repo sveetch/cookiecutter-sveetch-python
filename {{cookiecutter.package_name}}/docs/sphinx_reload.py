@@ -27,8 +27,8 @@ server.watch("*.rst", shell("make html", cwd="docs"))
 
 
 # Watch Python modules for autodoc review
-server.watch("{{cookiecutter.app_name}}/*.py", shell("make html", cwd="docs"))
-server.watch("{{cookiecutter.app_name}}/*/**.py", shell("make html", cwd="docs"))
+server.watch("{{ cookiecutter.app_name }}/*.py", shell("make html", cwd="docs"))
+server.watch("{{ cookiecutter.app_name }}/*/**.py", shell("make html", cwd="docs"))
 
 # Serve the builded documentation
 server.serve(root="docs/_build/html", port=8002, host="0.0.0.0")

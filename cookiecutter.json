@@ -10,13 +10,13 @@
     "author_username": "dummy",
     "pypi_username": "{{ cookiecutter.author_username }}",
 
-    "package_name": "{{ cookiecutter.project_name.lower() | slugify }}",
-    "app_name": "{{ cookiecutter.package_name.replace('-', '_') }}",
-    "__class_name": "{{ cookiecutter.package_name.replace('-', ' ').title().replace(' ', '') }}",
+    "package_name": "{{ cookiecutter.project_name.lower() | replace(' ', '-') | slugify }}",
+    "app_name": "{{ cookiecutter.project_name.lower() | replace(' ', '_') | slugify | replace('-', '_') }}",
+    "__class_name": "{{ cookiecutter.package_name | replace(' ', '') | slugify | replace('-', '') | title }}",
 
     "version": "0.1.0",
 
-    "_cookiecutter_sveetch_python_version": "0.4.2",
+    "_cookiecutter_sveetch_python_version": "0.5.0",
 
     "__prompts__": {
         "project_name": "Input your full project name:",
